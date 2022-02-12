@@ -1,0 +1,59 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/*CSS Variables*/
+
+:root {
+  --white: #fff;
+  --soft-grey: #9e9e9e;
+  --black: #141414;
+  --text: #595959;
+  --primary: #4d6bb3;
+  --secondary: #194545;
+}
+
+/*Fullscreen Hero Image*/
+
+.hero {
+  width: 100%;
+  height: calc(100vh - 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url(../images/img5.jpeg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/*Hero Banner*/
+
+.banner {
+  width: 100%;
+  height: 500px;
+  background-position: center center;
+  background-size: cover;
+  background-image: url(../images/index/hero.jpeg);
+}
+
+/*Media Queries*/
+
+@media screen and (max-width: 1400px) {
+  .nav-container {
+    padding: 0 8px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .desktop-nav {
+    display: none;
+  }
+  #menu-container {
+    display: block;
+  }
+}

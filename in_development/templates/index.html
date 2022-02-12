@@ -25,8 +25,9 @@
       <meta name="twitter:description" content="{{company.description}}" />
       <meta name="twitter:image" content="https://{{company.website}}/static/assets/images/logo.ico" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="stylesheet" href="../static/assets/css/cssreset.css" />
-      <link rel="stylesheet" href="../static/assets/css/styles.css" />
+      <link rel="stylesheet" type="text/css" href="../static/css/cssreset.css" />
+      <link rel="stylesheet" type="text/css" href="../static/css/corestyles.css" />
+      <link rel="stylesheet" type="text/css" href="../static/css/styles.css" />
     </head>
   </head>
   <body>
@@ -34,7 +35,7 @@
       <!-- Navigation Begin -->
       <nav class="mobile-menu">
         <ul>
-          <li><a class="active-link" href="index.html">Services</a></li>
+          <li><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">More Info</a></li>
           <li class="no-bot-marg"><a href="#">Contact</a></li>
@@ -48,45 +49,74 @@
       </nav>
       <header>
         <div class="nav-container">
-          <a class="logo-wrapper" href="index.html"><img src="../static/assets/images/main-logo.jpeg" alt="Logo" class="logo" /></a>
-          <nav class="desktop-nav">
+          <a href="index.html"><img src="" alt="logo" /></a>
+          <nav class="top-nav">
             <ul>
-              <div class="dropdown-wrapper">
-                <p class="noSelect">Services</p>
-                <ul>
-                  <li><a href="#">Web Design</a></li>
-                  <li><a href="#">Automation</a></li>
-                  <li><a href="#">Data</a></li>
+              <li><a class="active-link" href="index.html">Home</a></li>
+              <li><a href="index.html">About</a></li>
+              <li><a href="index.html">Services</a></li>
+              <li class="dropdown-menu">
+                <a href="javascript:void(0)">Dropdown</a>
+                <ul class="dropdown-ul">
+                  <li><a href="">Refrigeration, Air Conditioning & Heat Pump Training</a></li>
+                  <li><a href="">Services</a></li>
+                  <li><a href="">Services</a></li>
                 </ul>
-              </div>
-              <div class="dropdown-wrapper">
-                <p class="noSelect">Training & Qualifications</p>
-                <ul>
-                  <li><a href="#">Web Design</a></li>
-                  <li><a href="#">Automation</a></li>
-                  <li><a href="#">Data</a></li>
-                </ul>
-              </div>
-              <li><a href="#">Contact</a></li>
+              </li>
+              <li><a href="index.html">Contact</a></li>
             </ul>
           </nav>
-          <div id="menu-container"></div>
         </div>
       </header>
+      <section class="banner"></section>
+      <section class="container"></section>
       <!-- Navigation End -->
-      <div class="container"></div>
+      <!-- Fullscreen Hero Image Begin -->
+      <!--
+      <section class="hero">
+        <div class="hero-inner"></div>
+      </section>
+      -->
+      <!-- Fullscreen Hero Image End -->
+      <div class="container">
+        <!-- Image Slider Begin -->
+        <!--
+        <div class="carousel-container">
+          <i class="image-slider-arrow-left" id="previousBtn"></i>
+          <i class="image-slider-arrow-right" id="nextBtn"></i>
+          <div class="carousel-slide">
+            <img src="../static/assets/images/img5.jpeg" id="lastClone" alt="" />
+            <img src="../static/assets/images/img1.jpeg" alt="" />
+            <img src="../static/assets/images/img2.jpeg" alt="" />
+            <img src="../static/assets/images/img3.jpeg" alt="" />
+            <img src="../static/assets/images/img4.jpeg" alt="" />
+            <img src="../static/assets/images/img5.jpeg" alt="" />
+            <img src="../static/assets/images/img1.jpeg" id="firstClone" alt="" />
+          </div>
+        </div>
+      -->
+        <!-- Image Slider End -->
+      </div>
     </div>
     <footer>
       <div class="footer-grid">
         <section>Logo here</section>
-        <section>Links here</section>
-        <section>Links here</section>
+        <section>
+          <p class="footer-header">Site Map</p>
+        </section>
+        <section>
+          <p class="footer-header">Get in Touch</p>
+          <ul>
+            <li><a href="javascript:void(0)" target="_blank">Phone Number</a></li>
+            <li><a href="javascript:void(0)" target="_blank">Email Address</a></li>
+          </ul>
+        </section>
       </div>
       <div class="designed-by-wrapper">
-        <a href="https://premiumify.me"><img id="designed-by" src="../static/assets/images/Logo96dpiwhite.png" alt="" /></a>
+        <a href="https://premiumify.me"><img id="designed-by" src="../static/images/Logo96dpiwhite.png" alt="" /></a>
       </div>
     </footer>
-    <script src="../static/assets/js/bodymovin-library.js"></script>
-    <script type="text/javascript" src="../static/assets/js/header.js"></script>
+    <script src="../static/js/bodymovin-library.js"></script>
+    <!--<script type="text/javascript" src="../static/js/header.js"></script>-->
   </body>
 </html>
