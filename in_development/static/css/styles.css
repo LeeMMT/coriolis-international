@@ -118,6 +118,7 @@
 
 .service-box-content p {
   display: block;
+  width: 100%;
   padding: 4px;
   color: var(--white);
 }
