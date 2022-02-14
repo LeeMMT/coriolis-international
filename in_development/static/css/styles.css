@@ -11,8 +11,9 @@
   --soft-grey: #9e9e9e;
   --black: #141414;
   --text: #595959;
-  --primary: #4d6bb3;
-  --secondary: #194545;
+  --primary: #1f5a8a;
+  --secondary: #37867f;
+  --third: #d8e9e6;
 }
 
 /*Fullscreen Hero Image*/
@@ -41,19 +42,131 @@
   background-image: url(../images/index/hero.jpeg);
 }
 
+.banner-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.banner-inner h1 {
+  font-size: 40px;
+}
+
+/*Services Section*/
+
+.service-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 4px;
+  margin: 64px auto;
+}
+
+.service-section .text-wrapper {
+  width: 100%;
+  padding: 16px;
+  background-color: var(--secondary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--black);
+}
+
+.service-section h2 {
+  color: var(--third);
+  line-height: 1.2em;
+}
+
+.services-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 4px;
+  background-color: var(--white);
+  margin: 0 auto;
+}
+
+.service-box {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.service-box::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.service-box-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0, 0%, 0%, 0.3);
+  display: flex;
+  align-items: flex-end;
+  cursor: pointer;
+}
+
+.service-box-content:hover {
+  background-color: hsla(0, 0%, 0%, 0);
+}
+
+.service-box-content p {
+  display: block;
+  padding: 4px;
+  color: var(--white);
+}
+
+.service-box-content:hover p {
+  background-color: var(--secondary);
+  color: var(--third);
+}
+
+.service-box:nth-child(1) {
+  background-image: url(../images/index/sb1.jpeg);
+}
+
+.service-box:nth-child(2) {
+  background-image: url(../images/index/sb2.jpeg);
+}
+
+.service-box:nth-child(3) {
+  background-image: url(../images/index/sb3.jpeg);
+}
+
+.service-box:nth-child(4) {
+  background-image: url(../images/index/sb4.jpeg);
+}
+
+.service-box:nth-child(5) {
+  background-image: url(../images/index/sb5.jpeg);
+}
+
+.service-box:nth-child(6) {
+  background-image: url(../images/index/sb6.jpeg);
+}
+
 /*Media Queries*/
 
 @media screen and (max-width: 1400px) {
   .nav-container {
     padding: 0 8px;
   }
+  .container {
+    padding: 0 16px;
+  }
 }
 
 @media screen and (max-width: 600px) {
-  .desktop-nav {
+  .top-nav {
     display: none;
   }
-  #menu-container {
+  #mobile-menu {
     display: block;
   }
 }
