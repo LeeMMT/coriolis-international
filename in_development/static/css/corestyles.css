@@ -161,6 +161,10 @@ header {
   font-size: 16px;
 }
 
+.dropdown-menu:hover i {
+  background-image: url("../icons/down-chevron-primary.svg");
+}
+
 .dropdown-menu:hover .dropdown-nav {
   transform: translateY(80px);
 }
@@ -296,6 +300,10 @@ footer {
   font-family: "Open Sans Semi Bold", Arial, Helvetica, sans-serif;
 }
 
+.active-link i {
+  background-image: url("../icons/down-chevron-white.svg") !important;
+}
+
 .no-right-border {
   border-right: none !important;
 }
@@ -334,6 +342,10 @@ footer {
 
 .chevron-down.third {
   background-image: url("../icons/down-chevron-third.svg");
+}
+
+.chevron-down.primary {
+  background-image: url("../icons/down-chevron-primary.svg");
 }
 
 /*Fonts*/
