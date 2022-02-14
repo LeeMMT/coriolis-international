@@ -51,6 +51,7 @@
 
 .banner-inner h1 {
   font-size: 40px;
+  line-height: 1.5em;
 }
 
 /*Services Section*/
@@ -74,7 +75,6 @@
 
 .service-section h2 {
   color: var(--third);
-  line-height: 1.2em;
 }
 
 .services-grid {
@@ -151,6 +151,25 @@
   background-image: url(../images/index/sb6.jpeg);
 }
 
+/*Interior Section*/
+
+.interior-section {
+  margin: 64px auto;
+}
+
+.interior-section .text-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.text-wrapper li ul {
+  margin-left: 32px;
+}
+
+.text-wrapper li li {
+  list-style-type: circle;
+}
+
 /*Media Queries*/
 
 @media screen and (max-width: 1400px) {
@@ -165,10 +184,14 @@
 @media screen and (max-width: 1170px) {
   .service-section {
     grid-template-columns: 1fr;
+    row-gap: 32px;
   }
   .service-section .text-wrapper {
+    max-width: 800px;
+    padding: 0;
     background-color: transparent;
     color: var(--text);
+    margin: 0 auto;
   }
   .service-section h2 {
     color: var(--black);
