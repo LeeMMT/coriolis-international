@@ -1,16 +1,14 @@
 const mobileMenu = (function () {
-  const mobileMenuBtn = document.querySelector("#menu-container");
+  const mobileMenuBtn = document.querySelector("#mobile-menu");
   const mobileMenu = document.querySelector(".mobile-menu");
   let state = closed;
 
-  const checkScrollPos = () => {
+  /*const checkScrollPos = () => {
     const currentScrollPos = window.pageYOffset;
-    if (currentScrollPos > window.innerHeight - 60) {
-      header.classList.add("solid-bg");
+    if () {
     } else {
-      header.classList.remove("solid-bg");
     }
-  };
+  };*/
 
   const showMenu = function () {
     document.body.classList.toggle("stop-scrolling");
@@ -18,8 +16,8 @@ const mobileMenu = (function () {
   };
 
   const menuAnimation = bodymovin.loadAnimation({
-    container: document.querySelector("#menu-container"),
-    path: "../static/assets/animations/menu.json",
+    container: document.querySelector("#mobile-menu"),
+    path: "../static/animations/menu.json",
     renderer: "svg",
     loop: false,
     autoplay: false,
@@ -36,7 +34,7 @@ const mobileMenu = (function () {
     }
   };
 
-  window.addEventListener("scroll", checkScrollPos);
+  //window.addEventListener("scroll", checkScrollPos);
   menuAnimation.goToAndStop(4, true);
   menuAnimation.setSpeed(3);
   mobileMenuBtn.addEventListener("click", showMenu);
