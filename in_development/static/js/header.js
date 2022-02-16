@@ -37,8 +37,9 @@ const secondaryDropdownNavs = (function () {
   const secondaryDropdownBtns = document.querySelectorAll(".secondary-dropdown-button");
 
   const showDropdown = (e) => {
-    const id = e.target.getAttribute("data-i");
-    document.querySelector(`div[data-i="secondary-dropdown-${id}"]`).classList.add("visible");
+    const id = Number(e.target.getAttribute("data-i"));
+    console.log(e.target.getAttribute("data-i"));
+    document.querySelector("#dropdown-1").classList.add("visible");
     e.target.parentElement.nextElementSibling.classList.add("shifted-right");
   };
 
