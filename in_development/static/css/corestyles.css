@@ -153,7 +153,7 @@ header {
   left: 0;
   max-width: 1400px;
   width: 100%;
-  height: 240px;
+  height: max-content;
   transform: translateY(-100%);
   background-color: var(--white);
   overflow: hidden;
@@ -169,29 +169,49 @@ header {
   transform: translateY(80px);
 }
 
-.dropdown-nav > ul {
+.dropdown-nav > section {
   position: relative;
   z-index: 2;
   max-width: 300px;
-  width: 100%;
-  padding-bottom: 12px;
   background-color: var(--white);
-  border-right: solid 1px var(--soft-grey);
+  border-left: solid 1px var(--soft-grey);
   transform-style: preserve-3d;
-  margin-top: auto;
   transition: all 0.5s ease;
 }
 
-.dropdown-nav > ul.shifted-right {
+.dropdown-nav > section:first-of-type {
+  border-left: none;
+}
+
+.dropdown-nav > section.two-col {
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+}
+
+.section-no-heading div {
+  border-left: solid 1px var(--soft-grey);
+}
+
+.dropdown-nav > section.shifted-right {
   transform: translateX(100%);
+}
+
+.dropdown-nav h2 {
+  font-size: 16px;
+  padding: 4px 8px !important;
+}
+
+.dummy-header {
+  visibility: hidden;
 }
 
 .dropdown-nav li {
   width: 100%;
-  height: max-content;
+  height: 3em;
   padding: 4px 8px !important;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   margin: 0;
   white-space: pre-wrap;
@@ -223,6 +243,11 @@ header {
 }
 
 /*Secondary Dropdown*/
+
+.secondary-dropdown-button i {
+  align-self: baseline;
+  margin-top: 2px;
+}
 
 .secondary-dropdown-button * {
   pointer-events: none;
@@ -342,6 +367,10 @@ footer {
 }
 
 /*Utility*/
+
+.extra-bot-marg {
+  margin-bottom: 26px !important;
+}
 
 .no-bot-marg {
   margin-bottom: 0 !important;
