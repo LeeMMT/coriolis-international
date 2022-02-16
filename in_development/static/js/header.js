@@ -3,13 +3,6 @@ const mobileMenu = (function () {
   const mobileMenu = document.querySelector(".mobile-menu");
   let state = closed;
 
-  /*const checkScrollPos = () => {
-    const currentScrollPos = window.pageYOffset;
-    if () {
-    } else {
-    }
-  };*/
-
   const showMenu = function () {
     document.body.classList.toggle("stop-scrolling");
     mobileMenu.classList.toggle("show-menu");
@@ -34,9 +27,20 @@ const mobileMenu = (function () {
     }
   };
 
-  //window.addEventListener("scroll", checkScrollPos);
   menuAnimation.goToAndStop(4, true);
   menuAnimation.setSpeed(3);
   mobileMenuBtn.addEventListener("click", showMenu);
   mobileMenuBtn.addEventListener("click", animateMenu);
+})();
+
+const secondaryDropdownNavs = (function () {
+  const secondaryDropdownBtns = document.querySelectorAll(".secondary-dropdown-button");
+
+  const showDropdown = (e) => {
+    const id = e.target.getAttribute("data-i");
+    document.querySelector(`div[data-i="secondary-dropdown-${id}"]`).classList.add("visible");
+    e.target.parentElement.nextElementSibling.classList.add("shifted-right");
+  };
+
+  secondaryDropdownBtns.forEach((el) => el.addEventListener("click", showDropdown));
 })();
