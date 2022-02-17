@@ -375,6 +375,10 @@ footer {
 
 /*Utility*/
 
+.margin-top {
+  margin-top: 16px;
+}
+
 .arrow-right.rotated {
   transform: rotate(0);
 }
