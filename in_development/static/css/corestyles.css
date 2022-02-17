@@ -199,6 +199,11 @@ header {
 
 .dummy-header {
   visibility: hidden;
+  max-width: 500px;
+  padding: 4px 8px !important;
+  font-family: "Open Sans Med", Arial, Helvetica, sans-serif;
+  margin-bottom: 16px;
+  font-size: 16px;
 }
 
 .dropdown-nav li {
@@ -267,6 +272,10 @@ header {
 
 .secondary-dropdown.visible {
   transform: translateX(100%);
+}
+
+.secondary-dropdown.visible.shifted-up {
+  transform: translateX(100%) translateY(-100%) translateZ(-10px);
 }
 
 /*Mobile Menu*/
@@ -357,6 +366,10 @@ footer {
 
 /*Utility*/
 
+.arrow-right.rotated {
+  transform: rotate(180deg);
+}
+
 .extra-bot-marg {
   margin-bottom: 26px !important;
 }
@@ -424,6 +437,7 @@ footer {
   background-image: url("../icons/right-arrow.svg");
   background-repeat: no-repeat;
   background-size: contain;
+  transition: all 0.2s;
 }
 
 /*Fonts*/

@@ -36,13 +36,45 @@ const mobileMenu = (function () {
 const secondaryDropdownNavs = (function () {
   const secondaryDropdownBtns = document.querySelectorAll(".secondary-dropdown-button");
   const toBeShiftedRightEls = document.querySelectorAll(".to-be-shifted");
+  let secondaryDropdownOpen = false;
+  let openSecondaryId = null;
+
+  const recycleShiftedUpMenus = () => {
+    if (document.querySelector(".shifted-up")) {
+      console.log("firing");
+      const elToRecycle = document.querySelector(".shifted-up");
+      elToRecycle.classList.remove("shifted-up");
+      elToRecycle.classList.remove("visible");
+    }
+  };
 
   const showDropdown = (e) => {
-    const id = Number(e.target.getAttribute("data-i"));
-    document.querySelector(`#dropdown-${id}`).classList.add("visible");
-    toBeShiftedRightEls.forEach((el) => {
-      el.classList.add("shifted-right");
-    });
+    recycleShiftedUpMenus();
+    console.log(openSecondaryId);
+    console.log(e.target.getAttribute("data-i") == openSecondaryId);
+    if (e.target.getAttribute("data-i") == openSecondaryId) {
+      document.querySelector(".secondary-dropdown.visible").classList.remove("visible");
+      toBeShiftedRightEls.forEach((el) => {
+        el.classList.remove("shifted-right");
+      });
+      secondaryDropdownOpen = false;
+      openSecondaryId = null;
+    } else if (secondaryDropdownOpen) {
+      document.querySelector(".secondary-dropdown.visible").classList.add("shifted-up");
+      const id = Number(e.target.getAttribute("data-i"));
+      document.querySelector(`#dropdown-${id}`).classList.add("visible");
+      document.querySelector(`.secondary-dropdown-button[data-i="${id}"] i`).classList.add("rotated");
+      openSecondaryId = id;
+    } else {
+      const id = Number(e.target.getAttribute("data-i"));
+      document.querySelector(`#dropdown-${id}`).classList.add("visible");
+      toBeShiftedRightEls.forEach((el) => {
+        el.classList.add("shifted-right");
+      });
+      document.querySelector(`.secondary-dropdown-button[data-i="${id}"] i`).classList.add("rotated");
+      secondaryDropdownOpen = true;
+      openSecondaryId = id;
+    }
   };
 
   secondaryDropdownBtns.forEach((el) => el.addEventListener("click", showDropdown));
