@@ -39,8 +39,7 @@ const secondaryDropdownNavs = (function () {
 
   const showDropdown = (e) => {
     const id = Number(e.target.getAttribute("data-i"));
-    console.log(e.target.getAttribute("data-i"));
-    document.querySelector("#dropdown-1").classList.add("visible");
+    document.querySelector(`#dropdown-${id}`).classList.add("visible");
     toBeShiftedRightEls.forEach((el) => {
       el.classList.add("shifted-right");
     });
