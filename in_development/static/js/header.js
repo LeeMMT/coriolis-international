@@ -35,12 +35,15 @@ const mobileMenu = (function () {
 
 const secondaryDropdownNavs = (function () {
   const secondaryDropdownBtns = document.querySelectorAll(".secondary-dropdown-button");
+  const toBeShiftedRightEls = document.querySelectorAll(".to-be-shifted");
 
   const showDropdown = (e) => {
     const id = Number(e.target.getAttribute("data-i"));
     console.log(e.target.getAttribute("data-i"));
     document.querySelector("#dropdown-1").classList.add("visible");
-    e.target.parentElement.nextElementSibling.classList.add("shifted-right");
+    toBeShiftedRightEls.forEach((el) => {
+      el.classList.add("shifted-right");
+    });
   };
 
   secondaryDropdownBtns.forEach((el) => el.addEventListener("click", showDropdown));

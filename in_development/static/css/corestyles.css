@@ -153,12 +153,17 @@ header {
   left: 0;
   max-width: 1400px;
   width: 100%;
-  height: max-content;
+  height: 400px;
   transform: translateY(-100%);
   background-color: var(--white);
   overflow: hidden;
   display: flex;
   font-size: 14px;
+}
+
+.dropdown-nav ul {
+  max-width: 250px;
+  width: 100%;
 }
 
 .dropdown-menu:hover .chevron-down {
@@ -189,12 +194,20 @@ header {
   transform-style: preserve-3d;
 }
 
+.dropdown-nav > section:last-of-type {
+  justify-self: stretch;
+}
+
 .solid-bg-div {
   background-color: var(--white);
 }
 
 .section-no-heading div {
   border-left: solid 1px var(--soft-grey);
+}
+
+.to-be-shifted {
+  transition: all 0.5s ease;
 }
 
 .shifted-right {
