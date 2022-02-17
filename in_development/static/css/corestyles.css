@@ -370,10 +370,6 @@ footer {
   transform: rotate(180deg);
 }
 
-.extra-bot-marg {
-  margin-bottom: 26px !important;
-}
-
 .no-bot-marg {
   margin-bottom: 0 !important;
 }
@@ -386,10 +382,6 @@ footer {
 
 .active-link i {
   background-image: url("../icons/down-chevron-white.svg") !important;
-}
-
-.no-right-border {
-  border-right: none !important;
 }
 
 .noSelect {

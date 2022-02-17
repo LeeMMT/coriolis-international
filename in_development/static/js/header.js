@@ -53,13 +53,16 @@ const secondaryDropdownNavs = (function () {
     console.log(openSecondaryId);
     console.log(e.target.getAttribute("data-i") == openSecondaryId);
     if (e.target.getAttribute("data-i") == openSecondaryId) {
+      const id = Number(e.target.getAttribute("data-i"));
       document.querySelector(".secondary-dropdown.visible").classList.remove("visible");
+      document.querySelector(`.secondary-dropdown-button[data-i="${id}"] i`).classList.toggle("rotated");
       toBeShiftedRightEls.forEach((el) => {
         el.classList.remove("shifted-right");
       });
       secondaryDropdownOpen = false;
       openSecondaryId = null;
     } else if (secondaryDropdownOpen) {
+      document.querySelector(".rotated").classList.toggle("rotated");
       document.querySelector(".secondary-dropdown.visible").classList.add("shifted-up");
       const id = Number(e.target.getAttribute("data-i"));
       document.querySelector(`#dropdown-${id}`).classList.add("visible");
@@ -71,7 +74,7 @@ const secondaryDropdownNavs = (function () {
       toBeShiftedRightEls.forEach((el) => {
         el.classList.add("shifted-right");
       });
-      document.querySelector(`.secondary-dropdown-button[data-i="${id}"] i`).classList.add("rotated");
+      document.querySelector(`.secondary-dropdown-button[data-i="${id}"] i`).classList.toggle("rotated");
       secondaryDropdownOpen = true;
       openSecondaryId = id;
     }
