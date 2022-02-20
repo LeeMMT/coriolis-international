@@ -7,12 +7,15 @@
 /*CSS Variables*/
 
 :root {
-  --white: #fff;
-  --light-grey: #fcfcfc;
+  --white: #ffffff;
   --soft-grey: #f2f2f2;
+  --light-grey: #fcfcfc;
+  --light-grey-two: #3b3b3b;
+  --dark-grey: #333333;
   --black: #141414;
   --text: #595959;
   --primary: #1f5a8a;
+  --primary-darker: #1c517d;
   --secondary: #37867f;
   --third: #d8e9e6;
 }
@@ -162,6 +165,11 @@
 .interior-section .text-wrapper {
   max-width: 800px;
   margin: 0 auto;
+}
+
+.heading {
+  position: relative;
+  z-index: 2;
 }
 
 .text-wrapper li ul {

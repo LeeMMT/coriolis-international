@@ -154,6 +154,7 @@ header {
 
 .dropdown-nav {
   position: absolute;
+  z-index: 3;
   top: 0;
   left: 0;
   max-width: 1400px;
@@ -299,7 +300,6 @@ header {
   max-width: 300px;
   width: calc(100% - 50px);
   bottom: 0;
-  padding: 16px 0;
   position: fixed;
   top: 96px;
   transform: translate(-100%);
@@ -319,15 +319,80 @@ header {
   display: initial;
 }
 
-.mobile-menu li {
-  display: block;
-  padding: 8px;
-  border-bottom: solid 1px var(--white);
+.mobile-menu a {
+  margin: 0;
 }
 
-.mobile-menu a {
+/*Mobile Accordian Menu*/
+
+.accordian {
+  width: 100%;
+  overflow: hidden;
+}
+.accordian a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.accordian-item {
+  border-top: 1px solid var(--primary-darker);
+  list-style: none;
+  overflow: hidden;
+}
+
+.btn {
   display: block;
-  margin: 0;
+  padding: 16px 18px;
+  background: var(--primary);
+  color: white;
+  position: relative;
+  z-index: 1;
+  transform-style: preserve-3d;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  background: var(--primary);
+  left: 1.5rem;
+  bottom: -0.5rem;
+  transform: rotate(45deg) translateZ(-10px);
+}
+
+.accordian-item__sub {
+  background: var(--dark-grey);
+  overflow: hidden;
+  transition: max-height 0.3s;
+  max-height: 0;
+}
+.accordian-item__sub a {
+  display: block;
+  padding: 1rem 1.6rem;
+  color: white;
+  font-size: 0.9rem;
+  position: relative;
+  border-bottom: 1px solid var(--light-grey-two);
+}
+.accordian-item__sub a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0.4rem;
+  height: 100%;
+  background: var(--primary);
+  transform: translatex(-0.4rem);
+  transition: 0.3s;
+  opacity: 0;
+}
+.accordian-item__sub a:hover::before {
+  opacity: 1;
+  transform: translatex(0);
+}
+
+.accordian-item:target .accordian-item__sub {
+  max-height: 500px;
 }
 
 /*Footer*/
@@ -427,12 +492,6 @@ footer {
   background-size: contain;
   width: 16px;
   height: 16px;
-  transform: rotate(90deg);
-  transition: 0.3s;
-}
-
-.chevron-down.rotated {
-  transform: rotate(0);
 }
 
 .chevron-down.white {
