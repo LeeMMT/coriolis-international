@@ -82,3 +82,42 @@ const secondaryDropdownNavs = (function () {
 
   secondaryDropdownBtns.forEach((el) => el.addEventListener("click", showDropdown));
 })();
+
+const accordianModule = (function () {
+  const accordianitems = document.querySelectorAll(".accordian-item");
+  const accordianSubItems = document.querySelectorAll(".accordian-sub-item__sub");
+  let openMenuHeight = null;
+
+  const resetSubItems = () => {
+    accordianSubItems.forEach((el) => {
+      el.style.height = 0;
+      el.classList.remove("open");
+    });
+  };
+
+  const toggleMenu = (e) => {
+    if (e.target.classList.contains("sub-btn")) {
+      if (e.target.nextElementSibling.classList.contains("open")) {
+        e.target.parentElement.parentElement.parentElement.style.height = `${openMenuHeight}px`;
+        e.target.nextElementSibling.style.height = 0;
+        e.target.nextElementSibling.classList.toggle("open");
+      } else {
+        openMenuHeight = e.target.parentElement.parentElement.parentElement.clientHeight;
+        e.target.nextElementSibling.style.height = `${e.target.nextElementSibling.scrollHeight}px`;
+        e.target.parentElement.parentElement.parentElement.style.height = `${openMenuHeight + e.target.nextElementSibling.scrollHeight}px`;
+        e.target.nextElementSibling.classList.toggle("open");
+      }
+    } else if (e.target.nextElementSibling.classList.contains("open")) {
+      e.target.nextElementSibling.style.height = 0;
+      e.target.nextElementSibling.classList.toggle("open");
+      if (e.target.classList.contains("has-sub")) {
+        resetSubItems();
+      }
+    } else {
+      e.target.nextElementSibling.style.height = `${e.target.nextElementSibling.scrollHeight}px`;
+      e.target.nextElementSibling.classList.toggle("open");
+    }
+  };
+
+  accordianitems.forEach((el) => el.addEventListener("click", toggleMenu));
+})();

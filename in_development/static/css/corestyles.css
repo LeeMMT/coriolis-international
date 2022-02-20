@@ -328,6 +328,7 @@ header {
 .accordian {
   width: 100%;
   overflow: hidden;
+  overflow-y: auto;
 }
 .accordian a {
   color: var(--white);
@@ -340,59 +341,41 @@ header {
   overflow: hidden;
 }
 
-.btn {
-  display: block;
-  padding: 16px 18px;
-  background: var(--primary);
-  color: white;
-  position: relative;
-  z-index: 1;
-  transform-style: preserve-3d;
-}
-.btn::before {
-  content: "";
-  position: absolute;
-  width: 1rem;
-  height: 1rem;
-  background: var(--primary);
-  left: 1.5rem;
-  bottom: -0.5rem;
-  transform: rotate(45deg) translateZ(-10px);
+.accordian-sub-item {
+  border-top: 1px solid var(--primary-darker);
+  list-style: none;
+  overflow: hidden;
 }
 
-.accordian-item__sub {
+.btn {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding: 16px 18px;
+  border: none;
+  background: var(--primary);
+  color: var(--white);
+  font-size: 16px;
+  font-family: "Open Sans Reg", Arial, Helvetica, sans-serif;
+  text-align: left;
+}
+
+.accordian-item__sub,
+.accordian-sub-item__sub {
+  height: 0;
   background: var(--dark-grey);
   overflow: hidden;
-  transition: max-height 0.3s;
-  max-height: 0;
+  transition: height 0.4s ease;
 }
-.accordian-item__sub a {
+
+.accordian-item__sub a,
+.accordian-sub-item__sub a {
   display: block;
   padding: 1rem 1.6rem;
   color: white;
   font-size: 0.9rem;
   position: relative;
   border-bottom: 1px solid var(--light-grey-two);
-}
-.accordian-item__sub a::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 0.4rem;
-  height: 100%;
-  background: var(--primary);
-  transform: translatex(-0.4rem);
-  transition: 0.3s;
-  opacity: 0;
-}
-.accordian-item__sub a:hover::before {
-  opacity: 1;
-  transform: translatex(0);
-}
-
-.accordian-item:target .accordian-item__sub {
-  max-height: 500px;
 }
 
 /*Footer*/
