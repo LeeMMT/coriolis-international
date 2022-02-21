@@ -10,7 +10,6 @@ body {
   font-family: "Open Sans Reg", Arial, Helvetica, sans-serif;
   font-size: 16px;
   color: var(--text);
-  line-height: 1.5em;
 }
 
 .content {
@@ -30,6 +29,10 @@ h2 {
   font-size: 24px;
   line-height: 1.2em;
   margin-bottom: 16px;
+}
+
+p {
+  line-height: 1.5em;
 }
 
 a {
@@ -358,6 +361,7 @@ header {
   font-size: 16px;
   font-family: "Open Sans Reg", Arial, Helvetica, sans-serif;
   text-align: left;
+  /*margin: 0; try this fix if ios still broken */
 }
 
 .accordian-item__sub,
