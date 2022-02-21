@@ -4,7 +4,7 @@ body {
 }
 
 body {
-  background-color: var(--white);
+  background-color: var(--secondary);
   display: flex;
   flex-direction: column;
   font-family: "Open Sans Reg", Arial, Helvetica, sans-serif;
@@ -255,6 +255,7 @@ header {
   height: max-content;
   padding: 0;
   margin: 0;
+  line-height: initial;
   word-wrap: break-word;
 }
 
