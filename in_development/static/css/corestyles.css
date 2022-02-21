@@ -310,7 +310,7 @@ header {
   position: fixed;
   top: 96px;
   transform: translate(-100%);
-  background-color: var(--secondary);
+  background-color: var(--white);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
