@@ -4,7 +4,7 @@ body {
 }
 
 body {
-  background-color: var(--secondary);
+  background-color: var(--white);
   display: flex;
   flex-direction: column;
   font-family: "Open Sans Reg", Arial, Helvetica, sans-serif;
@@ -310,7 +310,7 @@ header {
   position: fixed;
   top: 96px;
   transform: translate(-100%);
-  background-color: var(--white);
+  background-color: var(--secondary);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -371,6 +371,8 @@ header {
 .accordian-item__sub,
 .accordian-sub-item__sub {
   height: 0;
+  padding: 0;
+  margin: 0;
   background: var(--dark-grey);
   overflow: hidden;
   transition: height 0.4s ease;
