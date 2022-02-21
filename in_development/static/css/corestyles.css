@@ -355,17 +355,34 @@ header {
 }
 
 .btn {
-  display: block;
   position: relative;
   width: 100%;
   padding: 16px 18px;
   border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background: var(--primary);
   color: var(--white);
-  font-size: 16px;
-  font-family: "Open Sans Reg", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-family: "Open Sans Med", Arial, Helvetica, sans-serif;
   text-align: left;
   margin: 0;
+}
+
+.btn i {
+  min-width: 16px !important;
+  max-width: 16px !important;
+  min-height: 16px !important;
+  max-height: 16px !important;
+  pointer-events: none;
+}
+
+.sub-btn i {
+  min-width: 14px !important;
+  max-width: 14px !important;
+  min-height: 14px !important;
+  max-height: 14px !important;
 }
 
 .accordian-item__sub,
