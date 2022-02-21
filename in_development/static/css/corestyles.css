@@ -40,6 +40,10 @@ a {
   cursor: pointer;
 }
 
+.text-wrapper li {
+  line-height: 1.5em;
+}
+
 a:link {
   color: var(--text);
 }
@@ -251,7 +255,6 @@ header {
   height: max-content;
   padding: 0;
   margin: 0;
-  line-height: initial;
   word-wrap: break-word;
 }
 
@@ -437,6 +440,10 @@ footer {
 
 .no-right-border {
   border-right: none !important;
+}
+
+.bot-marg {
+  margin-bottom: 8px !important;
 }
 
 .no-bot-marg {
