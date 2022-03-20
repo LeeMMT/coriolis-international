@@ -93,6 +93,8 @@
 .service-box {
   position: relative;
   box-sizing: border-box;
+  background-size: cover;
+  background-position: center center;
 }
 
 .service-box::before {
@@ -182,15 +184,6 @@
 
 /*Media Queries*/
 
-@media screen and (max-width: 1400px) {
-  .nav-container {
-    padding: 0 8px;
-  }
-  .container {
-    padding: 0 16px;
-  }
-}
-
 @media screen and (max-width: 1170px) {
   .service-section {
     grid-template-columns: 1fr;
@@ -214,14 +207,5 @@
 @media screen and (max-width: 500px) {
   .services-grid {
     grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .top-nav {
-    display: none;
-  }
-  #mobile-menu {
-    display: block;
   }
 }
