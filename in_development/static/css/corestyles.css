@@ -100,6 +100,15 @@ header {
   margin: 0 auto;
 }
 
+.logo-wrapper {
+  max-height: 72px;
+  height: 100%;
+}
+
+.logo {
+  height: 100%;
+}
+
 .top-nav {
   height: 100%;
   background-color: var(--white);
@@ -407,6 +416,10 @@ header {
   transition: height 0.4s ease;
 }
 
+.sub-btn {
+  background-color: hsl(207, 63%, 38%);
+}
+
 .accordian-item__sub a,
 .accordian-sub-item__sub a {
   display: block;
@@ -526,6 +539,11 @@ footer {
 
 .active-link i {
   background-image: url("../icons/down-chevron-white.svg") !important;
+}
+
+.sub-heading {
+  font-size: 18px;
+  font-family: "Open Sans Med", Arial, Helvetica, sans-serif;
 }
 
 .noSelect {
