@@ -509,6 +509,12 @@ header {
 
 .interior-section .cta {
   color: var(--white);
+  transition: all 0.3s ease;
+}
+
+.interior-section .cta:hover {
+  background-color: hsl(207, 63%, 43%);
+  margin-left: 4px;
 }
 
 .heading {
@@ -531,6 +537,10 @@ header {
   justify-content: space-between;
   gap: 16px;
   flex-wrap: wrap;
+}
+
+.text-and-img > div {
+  flex: 1 1 450px;
 }
 
 .text-and-img img {
@@ -615,7 +625,7 @@ footer {
 /*Utility*/
 
 .margin-top {
-  margin-top: 16px;
+  margin-top: 16px !important;
 }
 
 .arrow-right.rotated {
@@ -642,6 +652,14 @@ footer {
 
 .active-link i {
   background-image: url("../icons/down-chevron-white.svg") !important;
+}
+
+.inline-link {
+  color: var(--primary) !important;
+}
+
+.inline-link:hover {
+  text-decoration: underline;
 }
 
 .sub-heading {
