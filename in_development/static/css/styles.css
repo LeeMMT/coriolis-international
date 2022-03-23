@@ -4,22 +4,6 @@
   box-sizing: border-box;
 }
 
-/*CSS Variables*/
-
-:root {
-  --white: #ffffff;
-  --soft-grey: #f2f2f2;
-  --light-grey: #fcfcfc;
-  --light-grey-two: #3b3b3b;
-  --dark-grey: #333333;
-  --black: #141414;
-  --text: #595959;
-  --primary: #1f5a8a;
-  --primary-darker: #1c517d;
-  --secondary: #37867f;
-  --third: #d8e9e6;
-}
-
 /*Fullscreen Hero Image*/
 
 .hero {
@@ -112,7 +96,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: hsla(0, 0%, 0%, 0.3);
+  background-color: hsla(0, 0%, 0%, 0.2);
   display: flex;
   align-items: flex-end;
   cursor: pointer;
