@@ -385,6 +385,24 @@ header {
   z-index: 3;
 }
 
+.contact-info {
+  padding: 16px;
+  border-top: solid 1px #ebebeb;
+  font-size: 14px;
+  font-family: "Open Sans Med", Arial, Helvetica, sans-serif;
+}
+
+.contact-info i {
+  width: 14px;
+  height: 14px;
+}
+
+.contact-info li {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
 .show-menu {
   transform: translate(0%);
 }
@@ -463,8 +481,9 @@ header {
   transition: height 0.4s ease;
 }
 
-.sub-btn {
+.sub-btn:first-of-type {
   background-color: hsl(207, 63%, 38%);
+  border-bottom: solid 1px hsl(207, 63%, 48%);
 }
 
 .accordian-item__sub a,
@@ -685,11 +704,19 @@ footer {
   background-size: contain;
 }
 
+.telephone.blue {
+  background-image: url("../icons/telephone-blue.svg");
+}
+
 .mail {
   display: inline-block;
   background-image: url("../icons/mail.svg");
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.mail.blue {
+  background-image: url("../icons/mail-blue.svg");
 }
 
 /*Fonts*/
