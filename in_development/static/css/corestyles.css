@@ -518,6 +518,20 @@ header {
   max-width: 250px;
 }
 
+/*Partners & Certs*/
+
+.certs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+  flex-wrap: wrap;
+}
+
+.certs img {
+  max-height: 64px;
+}
+
 /*Footer*/
 
 footer {

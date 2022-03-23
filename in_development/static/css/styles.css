@@ -35,9 +35,11 @@
   height: 100%;
   display: flex;
   align-items: center;
+  font-family: "Open Sans Med", Arial, Helvetica, sans-serif;
 }
 
 .banner-inner h1 {
+  font-family: "Open Sans Semi Bold", Arial, Helvetica, sans-serif;
   font-size: 40px;
   line-height: 1.5em;
 }
@@ -48,21 +50,22 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 4px;
-  margin: 64px auto;
+  margin: 0 auto;
 }
 
 .service-section .text-wrapper {
   width: 100%;
   padding: 16px;
-  background-color: var(--secondary);
+  background-color: var(--primary);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: var(--black);
+  color: var(--white);
 }
 
 .service-section h2 {
-  color: var(--third);
+  color: var(--white);
+  font-size: 32px;
 }
 
 .services-grid {
