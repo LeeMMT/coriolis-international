@@ -545,8 +545,40 @@ header {
   flex: 1 1 450px;
 }
 
-.text-and-img img {
+.interior-img-wrapper {
+  display: flex;
+  flex-direction: column;
   max-width: 250px;
+}
+
+.interior-img-wrapper p {
+  padding: 8px;
+  background-color: var(--primary);
+  color: var(--white);
+  text-align: center;
+}
+
+.interior-img-wrapper img {
+  max-width: 250px;
+}
+
+.interior-img-wrapper.multi {
+  flex-direction: row;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.img-flex-container {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin: 32px 0;
+}
+
+.img-flex-container img {
+  max-height: 64px;
 }
 
 /*Partners & Certs*/
@@ -792,5 +824,11 @@ footer {
 @media screen and (max-width: 550px) {
   .footer-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .img-flex-container img {
+    max-width: 300px;
   }
 }
