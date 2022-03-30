@@ -111,6 +111,7 @@ a:active {
   color: var(--white);
   text-decoration: none;
   margin-top: 16px;
+  transition: all 0.3s ease;
 }
 
 /*Navigation*/
@@ -511,10 +512,9 @@ header {
 
 .interior-section .cta {
   color: var(--white);
-  transition: all 0.3s ease;
 }
 
-.interior-section .cta:hover {
+.cta:hover {
   background-color: hsl(207, 63%, 43%);
   margin-left: 4px;
 }
@@ -537,7 +537,8 @@ header {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 16px;
+  column-gap: 16px;
+  row-gap: 32px;
   flex-wrap: wrap;
 }
 
@@ -588,6 +589,11 @@ header {
   flex-direction: column;
 }
 
+.booking-form * {
+  font-family: "Open Sans Reg", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
 .form-col {
   display: flex;
   flex-direction: column;
@@ -596,6 +602,27 @@ header {
 
 .form-col:last-of-type {
   margin-bottom: 0;
+}
+
+.booking-form label {
+  font-family: "Open Sans Med", Arial, Helvetica, sans-serif;
+  margin-bottom: 8px;
+}
+
+.booking-form input,
+.booking-form textarea {
+  padding: 4px;
+}
+
+.booking-form span {
+  color: hsl(0, 60%, 50%);
+}
+
+.booking-form input[type="submit"] {
+  width: max-content;
+  padding: 8px;
+  margin-top: 16px;
+  cursor: pointer;
 }
 
 /*Partners & Certs*/
@@ -610,6 +637,12 @@ header {
 
 .certs img {
   max-height: 64px;
+}
+
+/*Useful Links Page*/
+
+.useful-links a:hover {
+  text-decoration: underline;
 }
 
 /*Footer*/
@@ -675,6 +708,18 @@ footer {
 
 /*Utility*/
 
+.italic {
+  font-family: "Open Sans Italic", Arial, Helvetica, sans-serif;
+}
+
+.obvious-link {
+  color: var(--primary) !important;
+}
+
+.obvious-link:hover {
+  text-decoration: underline;
+}
+
 .margin-top {
   margin-top: 16px !important;
 }
@@ -714,8 +759,14 @@ footer {
 }
 
 .sub-heading {
+  color: var(--text);
   font-size: 18px;
   font-family: "Open Sans Med", Arial, Helvetica, sans-serif;
+}
+
+.sub-heading.big {
+  font-size: 20px;
+  text-decoration: underline;
 }
 
 .noSelect {
