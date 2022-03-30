@@ -522,6 +522,7 @@ header {
 .heading {
   position: relative;
   z-index: 2;
+  margin-bottom: 32px;
 }
 
 .text-wrapper li ul {
@@ -637,6 +638,10 @@ header {
 
 .certs img {
   max-height: 64px;
+}
+
+#homepage-certs {
+  margin-top: 64px;
 }
 
 /*Useful Links Page*/
@@ -762,11 +767,16 @@ footer {
   color: var(--text);
   font-size: 18px;
   font-family: "Open Sans Med", Arial, Helvetica, sans-serif;
+  margin-bottom: 16px;
 }
 
 .sub-heading.big {
   font-size: 20px;
   text-decoration: underline;
+}
+
+.faq .sub-heading {
+  margin-bottom: 8px;
 }
 
 .noSelect {

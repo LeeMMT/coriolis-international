@@ -145,6 +145,12 @@
   background-image: url(../images/index/sb6.jpeg);
 }
 
+/*Homepage Testimonials*/
+
+#homepage-testimonials {
+  margin-top: 64px;
+}
+
 /*Media Queries*/
 
 @media screen and (max-width: 1170px) {
