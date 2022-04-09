@@ -211,12 +211,16 @@
                 <input type="email" name="email" id="email" />
               </div>
               <div class="form-col">
-                <label for="telephone-number">Your telephone number</label>
+                <label for="telephone-number">Your telephone number <span>*</span></label>
                 <input type="tel" name="telephone-number" id="telephone-number" />
               </div>
               <div class="form-col">
+                <label for="telephone-number">Subject/Course name <span>*</span></label>
+                <input type="text" name="subject-name" id="subject-name" required />
+              </div>
+              <div class="form-col">
                 <label for="message">Your message <span>*</span></label>
-                <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                <textarea name="message" id="message"></textarea>
               </div>
               <input type="submit" value="submit" />
             </form>

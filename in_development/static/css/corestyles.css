@@ -46,7 +46,7 @@ body {
   padding-bottom: 64px;
 }
 
-.splash:nth-of-type(odd) {
+.splash:nth-of-type(even) {
   background-color: #f5f5f5;
 }
 
@@ -121,7 +121,7 @@ header {
   z-index: 4;
   width: 100%;
   height: 80px;
-  background-color: var(--white);
+  background-color: #eaeaea;
   border-bottom: solid 2px var(--third);
   box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
 }
@@ -147,7 +147,7 @@ header {
 
 .top-nav {
   height: 100%;
-  background-color: var(--white);
+  background-color: #eaeaea;
   display: flex;
   align-items: center;
   font-family: "Open Sans Med", Arial, Helvetica, sans-serif;
@@ -158,7 +158,7 @@ header {
   display: inline-flex;
   width: max-content;
   padding-right: 5px;
-  border-right: solid 1px var(--soft-grey);
+  border-right: solid 1px hsl(0, 0%, 88%);
   align-items: center;
   margin-left: 5px;
 }
@@ -615,6 +615,10 @@ header {
   padding: 4px;
 }
 
+.booking-form textarea {
+  min-height: 80px;
+}
+
 .booking-form span {
   color: hsl(0, 60%, 50%);
 }
@@ -624,24 +628,6 @@ header {
   padding: 8px;
   margin-top: 16px;
   cursor: pointer;
-}
-
-/*Partners & Certs*/
-
-.certs {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 64px;
-  flex-wrap: wrap;
-}
-
-.certs img {
-  max-height: 64px;
-}
-
-#homepage-certs {
-  margin-top: 64px;
 }
 
 /*Useful Links Page*/
@@ -723,6 +709,11 @@ footer {
 
 .obvious-link:hover {
   text-decoration: underline;
+}
+
+.link-wrapper {
+  width: max-content;
+  height: max-content;
 }
 
 .margin-top {

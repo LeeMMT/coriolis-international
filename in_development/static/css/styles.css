@@ -145,6 +145,24 @@
   background-image: url(../images/index/sb6.jpeg);
 }
 
+/*Partners & Certs*/
+
+#homepage-certs {
+  margin-top: 64px;
+}
+
+.certs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+  flex-wrap: wrap;
+}
+
+.certs img {
+  height: 64px;
+}
+
 /*Homepage Testimonials*/
 
 #homepage-testimonials {
