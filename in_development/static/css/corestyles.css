@@ -326,10 +326,6 @@ header {
   grid-template-columns: 1fr;
 }
 
-#services-dropdown.homepage {
-  margin-left: -14px;
-}
-
 /*Secondary Dropdown*/
 
 .secondary-dropdown-container {
