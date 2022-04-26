@@ -74,6 +74,10 @@ a {
   cursor: pointer;
 }
 
+ol li {
+  list-style-type: decimal !important;
+}
+
 .text-wrapper li {
   line-height: 1.5em;
 }
@@ -754,7 +758,7 @@ footer {
   color: var(--text);
   font-size: 18px;
   font-family: "Open Sans Med", Arial, Helvetica, sans-serif;
-  margin-bottom: 16px;
+  margin-bottom: 16px !important;
 }
 
 .sub-heading.big {
