@@ -530,7 +530,7 @@ header {
 }
 
 .text-wrapper li li {
-  list-style-type: circle;
+  list-style-type: circle !important;
 }
 
 .text-and-img {
