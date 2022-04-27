@@ -699,6 +699,10 @@ footer {
 
 /*Utility*/
 
+.block {
+  display: block;
+}
+
 .italic {
   font-family: "Open Sans Italic", Arial, Helvetica, sans-serif;
 }
