@@ -24,7 +24,7 @@ body {
   display: flex;
   flex-direction: column;
   color: var(--text);
-  font-family: "Open Sans Reg", Arial, Helvetica, sans-serif;
+  font-family: 'Open Sans Reg', Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.5em;
 }
@@ -52,13 +52,14 @@ body {
 
 .container {
   max-width: 1400px;
+  width: 100%;
   margin: 0 auto;
 }
 
 h1,
 h2 {
   max-width: 500px;
-  font-family: "Open Sans Med", Arial, Helvetica, sans-serif;
+  font-family: 'Open Sans Med', Arial, Helvetica, sans-serif;
   color: var(--black);
   font-size: 24px;
   line-height: 1.2em;
@@ -125,7 +126,7 @@ header {
   z-index: 4;
   width: 100%;
   height: 80px;
-  background-color: #eaeaea;
+  background-color: #fff;
   border-bottom: solid 2px var(--third);
   box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
 }
@@ -149,12 +150,16 @@ header {
   height: 100%;
 }
 
+.footer-logo {
+  max-height: 124px;
+}
+
 .top-nav {
   height: 100%;
-  background-color: #eaeaea;
+  background-color: #fff;
   display: flex;
   align-items: center;
-  font-family: "Open Sans Med", Arial, Helvetica, sans-serif;
+  font-family: 'Open Sans Med', Arial, Helvetica, sans-serif;
 }
 
 .top-nav li {
@@ -162,7 +167,7 @@ header {
   display: inline-flex;
   width: max-content;
   padding-right: 5px;
-  border-right: solid 1px hsl(0, 0%, 88%);
+  border-right: solid 1px hsl(0, 0%, 92%);
   align-items: center;
   margin-left: 5px;
 }
@@ -234,7 +239,7 @@ header {
 }
 
 .dropdown-menu:hover .chevron-down {
-  background-image: url("../icons/down-chevron-primary.svg");
+  background-image: url('../icons/down-chevron-primary.svg');
 }
 
 .dropdown-menu:hover .dropdown-nav {
@@ -268,7 +273,7 @@ header {
   visibility: hidden;
   max-width: 500px;
   padding: 4px 8px !important;
-  font-family: "Open Sans Med", Arial, Helvetica, sans-serif;
+  font-family: 'Open Sans Med', Arial, Helvetica, sans-serif;
   margin-bottom: 16px;
   font-size: 16px;
 }
@@ -392,7 +397,7 @@ header {
   padding: 16px;
   border-top: solid 1px #ebebeb;
   font-size: 14px;
-  font-family: "Open Sans Med", Arial, Helvetica, sans-serif;
+  font-family: 'Open Sans Med', Arial, Helvetica, sans-serif;
 }
 
 .contact-info i {
@@ -454,7 +459,7 @@ header {
   background: var(--primary);
   color: var(--white);
   font-size: 14px;
-  font-family: "Open Sans Med", Arial, Helvetica, sans-serif;
+  font-family: 'Open Sans Med', Arial, Helvetica, sans-serif;
   text-align: left;
   margin: 0;
 }
@@ -564,6 +569,21 @@ header {
   max-width: 250px;
 }
 
+.small-img {
+  max-width: 100px;
+  max-height: 64px;
+}
+
+.small-med-img {
+  max-width: 200px;
+  max-height: 100px;
+}
+
+.large-img {
+  max-width: 400px;
+  max-height: 250px !important;
+}
+
 .interior-img-wrapper.multi {
   flex-direction: row;
   gap: 32px;
@@ -580,6 +600,7 @@ header {
 }
 
 .img-flex-container img {
+  display: block;
   max-height: 64px;
 }
 
@@ -591,7 +612,7 @@ header {
 }
 
 .booking-form * {
-  font-family: "Open Sans Reg", Arial, Helvetica, sans-serif;
+  font-family: 'Open Sans Reg', Arial, Helvetica, sans-serif;
   font-size: 16px;
 }
 
@@ -606,7 +627,7 @@ header {
 }
 
 .booking-form label {
-  font-family: "Open Sans Med", Arial, Helvetica, sans-serif;
+  font-family: 'Open Sans Med', Arial, Helvetica, sans-serif;
   margin-bottom: 8px;
 }
 
@@ -623,7 +644,7 @@ header {
   color: hsl(0, 60%, 50%);
 }
 
-.booking-form input[type="submit"] {
+.booking-form input[type='submit'] {
   width: max-content;
   padding: 8px;
   margin-top: 16px;
@@ -646,11 +667,11 @@ footer {
 }
 
 .footer-grid {
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   max-width: 1400px;
   padding: 16px 0;
-  margin: 0 auto;
 }
 
 .footer-grid section {
@@ -678,7 +699,7 @@ footer {
 }
 
 .footer-header {
-  font-family: "Open Sans Med", Arial, Helvetica, sans-serif;
+  font-family: 'Open Sans Med', Arial, Helvetica, sans-serif;
   font-size: 18px;
   margin-bottom: 16px;
 }
@@ -704,10 +725,11 @@ footer {
 }
 
 .italic {
-  font-family: "Open Sans Italic", Arial, Helvetica, sans-serif;
+  font-family: 'Open Sans Italic', Arial, Helvetica, sans-serif;
 }
 
 .obvious-link {
+  font-family: 'Open Sans Med', Arial, Helvetica, sans-serif;
   color: var(--primary) !important;
 }
 
@@ -722,6 +744,11 @@ footer {
 
 .margin-top {
   margin-top: 16px !important;
+}
+
+.normal-text {
+  font-family: 'Open Sans Reg', Arial, Helvetica, sans-serif !important;
+  font-size: 16px !important;
 }
 
 .arrow-right.rotated {
@@ -743,11 +770,11 @@ footer {
 .active-link {
   background-color: var(--primary);
   color: var(--white) !important;
-  font-family: "Open Sans Semi Bold", Arial, Helvetica, sans-serif;
+  font-family: 'Open Sans Semi Bold', Arial, Helvetica, sans-serif;
 }
 
 .active-link i {
-  background-image: url("../icons/down-chevron-white.svg") !important;
+  background-image: url('../icons/down-chevron-white.svg') !important;
 }
 
 .inline-link {
@@ -761,7 +788,7 @@ footer {
 .sub-heading {
   color: var(--text);
   font-size: 18px;
-  font-family: "Open Sans Med", Arial, Helvetica, sans-serif;
+  font-family: 'Open Sans Med', Arial, Helvetica, sans-serif;
   margin-bottom: 16px !important;
 }
 
@@ -795,7 +822,7 @@ footer {
 
 .chevron-down {
   display: inline-block;
-  background-image: url("../icons/down-chevron.svg");
+  background-image: url('../icons/down-chevron.svg');
   background-repeat: no-repeat;
   background-size: contain;
   width: 16px;
@@ -803,20 +830,20 @@ footer {
 }
 
 .chevron-down.white {
-  background-image: url("../icons/down-chevron-white.svg");
+  background-image: url('../icons/down-chevron-white.svg');
 }
 
 .chevron-down.third {
-  background-image: url("../icons/down-chevron-third.svg");
+  background-image: url('../icons/down-chevron-third.svg');
 }
 
 .chevron-down.primary {
-  background-image: url("../icons/down-chevron-primary.svg");
+  background-image: url('../icons/down-chevron-primary.svg');
 }
 
 .arrow-right {
   display: block;
-  background-image: url("../icons/right-arrow.svg");
+  background-image: url('../icons/right-arrow.svg');
   background-repeat: no-repeat;
   background-size: contain;
   transition: all 0.3s;
@@ -824,51 +851,51 @@ footer {
 
 .telephone {
   display: inline-block;
-  background-image: url("../icons/telephone.svg");
+  background-image: url('../icons/telephone.svg');
   background-repeat: no-repeat;
   background-size: contain;
 }
 
 .telephone.blue {
-  background-image: url("../icons/telephone-blue.svg");
+  background-image: url('../icons/telephone-blue.svg');
 }
 
 .mail {
   display: inline-block;
-  background-image: url("../icons/mail.svg");
+  background-image: url('../icons/mail.svg');
   background-repeat: no-repeat;
   background-size: contain;
 }
 
 .mail.blue {
-  background-image: url("../icons/mail-blue.svg");
+  background-image: url('../icons/mail-blue.svg');
 }
 
 /*Fonts*/
 
 @font-face {
-  font-family: "Open Sans Reg";
-  src: url("../fonts/OpenSans/OpenSans-Regular.ttf");
+  font-family: 'Open Sans Reg';
+  src: url('../fonts/OpenSans/OpenSans-Regular.ttf');
 }
 
 @font-face {
-  font-family: "Open Sans Med";
-  src: url("../fonts/OpenSans/OpenSans-Medium.ttf");
+  font-family: 'Open Sans Med';
+  src: url('../fonts/OpenSans/OpenSans-Medium.ttf');
 }
 
 @font-face {
-  font-family: "Open Sans Semi Bold";
-  src: url("../fonts/OpenSans/OpenSans-SemiBold.ttf");
+  font-family: 'Open Sans Semi Bold';
+  src: url('../fonts/OpenSans/OpenSans-SemiBold.ttf');
 }
 
 @font-face {
-  font-family: "Open Sans Bold";
-  src: url("../fonts/OpenSans/OpenSans-Bold.ttf");
+  font-family: 'Open Sans Bold';
+  src: url('../fonts/OpenSans/OpenSans-Bold.ttf');
 }
 
 @font-face {
-  font-family: "Open Sans Italic";
-  src: url("../fonts/OpenSans/OpenSans-Italic.ttf");
+  font-family: 'Open Sans Italic';
+  src: url('../fonts/OpenSans/OpenSans-Italic.ttf');
 }
 
 /*Media Queries*/
@@ -897,6 +924,8 @@ footer {
 @media screen and (max-width: 550px) {
   .footer-grid {
     grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
   }
 }
 
